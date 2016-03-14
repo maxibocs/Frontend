@@ -1,0 +1,21 @@
+table {
+	margin: 0 auto;
+	margin-top: 4%;
+	border-collapse: collapse;
+	border: 9px solid white;
+}
+tr, td {
+	border: 8px solid black;
+}
+.yellow{
+	background-color: #fff866;
+}
+.red{
+	background-color: #ff5e41;
+}
+.black{
+	background-color: #0a090a;
+}
+.blue{
+	background-color: #123d84;
+}

@@ -8,26 +8,25 @@ body{
 .wrapper{
   margin: 0 auto;
   padding: 50px;
-  width: 80%;
+  width: 970px;
   background-color: #fff;
   box-shadow:  0 0 20px rgba(0,0,0,0.5);
 }
 .name{
-  font-size: 50px;
+  font-size: 40px;
   font-family: sans-serif;
 }
 .menu{
   background-color: #454444;
-  height: 58px;
+  height: 40px;
+  width: 970px;
   margin: 40px 0px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 .menu li{
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 40px 10px 40px;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
 }
 .goods_top{
   background-color: #2f2f2f;
@@ -35,46 +34,50 @@ body{
   border-left: 1px solid #c8c8c8;
   border-right: 1px solid #c8c8c8;
 }
+.goods_top a{
+  color: white;
+  text-decoration: none;
+}
 .sidebar_menu{
-  width: 90%;
-  font-size: 18px;
-  padding: 0;
-  margin: 0;
+  width: 240px;
+  font-size: 14px;
 }
 .sidebar_menu li{
+  width: 200px;
+  height: 16px;
   border: 1px solid #c8c8c8;
   list-style-type: none;
-  padding: 10px 30px;
+  padding: 12px 20px;
 }
 #sidebar{
-  width: 26%;
   float: left;
 }
-.tv{
+.sidebar_menu .effect:hover{
+  width: 170px;
+  height: 16px;
   background-color: #f7f5f5;
-}
-.sidebar_menu .tv{
-  padding: 10px 50px;
+  padding: 12px 35px;
 }
 #content{
-  width: 70%;
-  float: right;
+  width: 680px;
+  float: left;
+  margin-left: 50px;
 }
-.fig{
+.box{
+  width: 678px;
+  height: 400px;
   margin: 0;
-  padding: 60px 0px;
   border: 1px solid #c8c8c8;
   text-align: center;
 }
-#content img{
-  width: 60%;
+.fig{
+  padding-top: 40px;
 }
 .text{
   line-height: 1.5;
   text-align: justify;
-  margin: 60px auto;
-  padding: 0px 40px ;
-  font-size: 20px;
+  margin: 35px 22px 60px 22px;
+  font-size: 14px;
 }
 .footer{
   	clear:both;

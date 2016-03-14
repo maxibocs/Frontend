@@ -37,9 +37,6 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
-
 .navigation {
     list-style: none;
     margin-left: 600px;
@@ -76,18 +73,20 @@ body{
 .navigation .Maldives a {
     background-image: url(../img/6.jpg);
 }
-
-
 .picture{
   width: 1000px;
   height: 237px;
 }
-
-
 .menu{
   width: 1000px;
+  height: 42px;
   border-bottom: 1px solid #000;
   background-color: #303030;
+}
+.menu .menu_item{
+  width: 1000px;
+  height: 42px;
+
 }
 .menu > ul {
     display: block;
@@ -100,6 +99,8 @@ body{
     float: none;
 }
 ul.menu_item > li {
+
+    height: 42px;
     float: left;
     position: relative;
 }
@@ -110,6 +111,9 @@ ul.menu_item > li > a {
     background-color: #303030;
     text-decoration: none;
 }
+.menu_item .top_menu{
+  padding: 8px 33px;
+}
 ul.menu_item > li > a:hover {
     background-color: #303030;
 }
@@ -117,7 +121,7 @@ ul.submenu {
     display: none;
     position: absolute;
     width: 120px;
-    top: 39px;
+    top: 43px;
     left: 30px;
     background-color: white;
 }
@@ -137,9 +141,6 @@ ul.submenu > li > a:hover {
 ul.menu_item > li:hover > ul.submenu {
     display: block;
 }
-
-
-
 .columm {
 width: 1000px;
 height: 540px;
@@ -153,7 +154,9 @@ color: #424c43;
 padding-bottom: 20000px;
 text-align: center;
 line-height: 1.5;
-
+}
+.info_text{
+  width: 209px;
 }
 .content {
 width: 580px;
@@ -169,8 +172,9 @@ padding-bottom: 20000px;
 text-align: center;
 line-height: 1.5;
 }
-
-
+.news_text{
+  width: 209px;
+}
 .footer{
 text-align: center;
 margin: 3px;

@@ -25,22 +25,37 @@ body{
   padding-right: 20px;
 }
 .menu li{
-  display: inline-block;
+  display: block;
   float: right;
-  color: #60b5ed;
-  padding: 10px 13px;
 }
 .menu .item1{
   background-color: #4eabda;
+  color: white;
+  padding: 10px 13px;
+}
+.menu_item:hover{
+  background-color: #4eabda;
+  color: white;
+}
+.menu_item a{
+  display: block;
+  text-decoration: none;
+  color: #60b5ed;
+  padding: 10px 13px;
+}
+.menu .menu_item a:hover{
   color: white;
 }
 .menu > .item2{
   border-left: 1px solid #4eabda;
   height: 32px;
-  padding: 0;
   margin: 2px auto;
 }
 .menu > .item3{
+  padding: 10px 13px;
+}
+.menu > .item3 a{
+  text-decoration: none;
   font-weight: bold;
   color: white;
 }

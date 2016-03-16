@@ -24,54 +24,52 @@ body{
   width: 970px;
   margin: 40px 0px;
 }
-.menu li{
+.top_menu{
   display: inline-block;
-  padding: 10px 40px 10px 40px;
-  color: white;
   font-size: 15px;
 }
-.top_menu:hover{
+.top_menu a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 40px 10px 40px;
+  border-left: 1px solid #454444;
+  border-right: 1px solid #454444;
+}
+.top_menu a:hover{
   background-color: #2f2f2f;
   height: 18px;
+  color: white;
   border-left: 1px solid #c8c8c8;
   border-right: 1px solid #c8c8c8;
 }
-.top_menu a:hover{
-  color: white;
-}
-.top_menu a{
-  color: white;
-  text-decoration: none;
-}
 
-.sidebar_menu{
+
+#sidebar{
+  height: 40px;
   width: 240px;
+  float: left;
   font-size: 14px;
 }
 .sidebar_menu li{
-  width: 200px;
-  height: 16px;
   border: 1px solid #c8c8c8;
   list-style-type: none;
-  padding: 12px 20px;
-}
-#sidebar{
-  float: left;
-}
-#sidebar .left_menu:hover{
-  width: 170px;
-  height: 16px;
-  background-color: #f7f5f5;
-  padding: 12px 35px;
 }
 .left_menu a{
+  height: 40px;
   display: block;
   text-decoration: none;
   color: #656363;
+  padding-left: 25px;
+  line-height: 40px;
 }
-#sidebar  li, a:hover{
+.left_menu a:hover{
+  background-color: #f7f5f5;
   color: black;
+  padding-left: 38px;
 }
+
+
 
 #content{
   width: 680px;
@@ -104,6 +102,10 @@ body{
   margin-bottom: 0;
 }
 .footer .menu li{
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+
+  font-size: 15px;
   color: black;
 }
 .bottom_menu a{

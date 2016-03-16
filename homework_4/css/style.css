@@ -34,8 +34,12 @@ body{
   text-align: left;
   margin-left: 812px;
   color: #128aa7;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 8px;
+}
+.contact p,
+.contact li{
+  font-size: 15px;
 }
 .navigation {
     list-style: none;
@@ -44,7 +48,7 @@ body{
 .navigation li {
     float: left;
     margin-right: 10px;
-    margin-top: 18px;
+    margin-top: 16px;
 }
 .navigation a {
     display: block;
@@ -137,6 +141,9 @@ color: #424c43;
 padding-bottom: 20000px;
 text-align: center;
 line-height: 1.5;
+}
+.info li{
+  list-style: none;
 }
 .info_text{
   width: 209px;

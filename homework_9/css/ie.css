@@ -1,6 +1,12 @@
 .about_box {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539',GradientType=0 );
 }
+.about_blok--ie {
+	margin-right: 0;
+}
+.prefooter_box--ie {
+	margin-right: 0;
+}
 .sub_menu_item a:hover{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(43, 34, 49, 0.4)', endColorstr='rgba(41, 32, 47, 0.5)',GradientType=0 );
 }

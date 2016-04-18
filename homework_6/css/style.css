@@ -1,5 +1,9 @@
 @import url("reset.css");
 }
+@font-face{
+	font-family:"Lucida Sans Unicode";
+	src:url("http://www.myfontfree.com/data/205/l/lucida-sans-unicode/Lucida Sans Unicode.ttf");
+}
 body {
 	background-color: #fff;
 }

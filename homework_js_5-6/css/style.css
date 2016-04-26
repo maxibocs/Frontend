@@ -1,0 +1,23 @@
+body {
+	background: black;
+}
+.btn {
+	margin-bottom: 5px;
+  font-size: 35px;
+}
+.clockShow {
+	margin-top: 200px;
+  text-align: center;
+	font-size: 84px;
+  font-weight: 900;
+  color: red;
+}
+.clockControls{
+  margin-top: 20px;
+  text-align: center;
+}
+.splitTime {
+	text-align: center;
+	font-weight: bold;
+	color: grey;
+}

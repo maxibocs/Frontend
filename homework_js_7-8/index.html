@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabs-Tooltip</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="tabs">
+		<ul class="tabs_menu">
+			<li class="menu_item"><a class="menu_link menu_link_active" href="#">Nunc tincidunt</a></li>
+			<li class="menu_item"><a class="menu_link" href="#">Proin dolor</a></li>
+			<li class="menu_item"><a class="menu_link" href="#">Aenean lacinia</a></li>
+		</ul>
+		<div class="tabs_content tabs_content_active">
+			<p class="sometext">Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+		</div>
+		<div class="tabs_content">
+			<p class="sometext">Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+		</div>
+		<div class="tabs_content">
+			<p class="sometext">Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+		</div>
+	</div>
+	<form class="toolblock form-horizontal">
+		<fieldset class="tooltips_group">
+			<div class="tooltips_box form-group">
+				<label class="tooltips_name col-sm-2 control-label" for="firstname">Firstname</label>
+				<div class="col-sm-4">
+					<input id="firstname" class="tooltips_form form-control">
+				</div>
+				<div class="tooltips_text col-sm-5 text-center">Please provide your firstname.</div>
+			</div>
+			<div class="tooltips_box form-group">
+				<label class="tooltips_name col-sm-2 control-label" for="lastname">Lastname</label>
+				<div class="col-sm-4">
+					<input id="lastname" class="tooltips_form form-control">
+				</div>
+				<div class="tooltips_text col-sm-5 text-center">Please provide also your lastname.</div>
+			</div>
+			<div class="tooltips_box form-group">
+				<label class="tooltips_name col-sm-2 control-label" for="address">Address</label>
+				<div class="col-sm-4">
+					<input id="address" class="tooltips_form form-control">
+				</div>
+				<div class="tooltips_text col-sm-5 text-center">Your home or work address.</div>
+			</div>
+		</fieldset>
+    <button class="tooltips_btn btn btn-default col-sm-2">Show help</button>
+	</form>
+</body>
+</html>

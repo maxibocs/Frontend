@@ -1,0 +1,80 @@
+.tabs {
+  margin: 20px auto 50px;
+  min-width: 220px;
+  padding: 10px;
+  width: 60%;
+  min-height: 230px;
+  border: 2px solid #e1e1e1;
+  border-radius: 15px;
+}
+.tabs_menu {
+  border-radius: 10px;
+  background: #d1d1d1;
+}
+.menu_item {
+  margin-top: 5px;
+  padding-left: 6px;
+  display: inline-block;
+  font-size: 18px;
+}
+.menu_link {
+  padding: 5px 5px 0 5px;
+  display: block;
+  border-radius: 10px 10px 0 0;
+  background: #e6e6e6;
+  color: #333;
+}
+.menu_link:hover,
+.menu_link_active {
+  background: #fff;
+  text-decoration: none;
+}
+.menu_link:focus {
+  text-decoration: none;
+  color: #333;
+}
+.tabs_content {
+  padding: 5px;
+  display: none;
+  font-size: 18px;
+}
+.tabs_content_active {
+  display: block;
+}
+.sometext {
+  font-size: 16px;
+}
+
+/*---------TOOLTIPS----------*/
+
+.toolblock{
+  width: 60%;
+  margin: 20px auto 50px;
+}
+.tooltips_group{
+  padding: 10px;
+  border: 2px solid #e1e1e1;
+  border-radius: 15px;
+}
+.tooltips_box {
+  position: relative;
+  margin: 10px 10px;
+}
+.tooltips_text {
+  position: absolute;
+  left: 50%;
+  display: none;
+  padding: 3px;
+  min-width: 235px;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.65);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.65);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.65);
+  background-color: white;
+}
+.tooltips_btn {
+  padding: 6px 3px;
+  margin-top: 5px;
+  background-color: #d1d1d1;
+}

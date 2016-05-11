@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.selectbox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="js/jquery.jcarousel.min.js"></script>
+	<script src="js/jquery.selectbox-0.2.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.2.3.min.js"></script>
+	<script src="js/script.js"></script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+  <!-- dropdown menu jQuery  -->
+<div class="wrap wrap_jQmenu">
+<nav>
+    <ul class="content">
+        <li><a href="#">Nav 1</a></li>
+        <li><a href="#">Nav 2</a></li>
+        <li class="dropdown">
+            <a href="#">Nav 3</a>
+            <ul class="sub-menu">
+                <li><a href="#">Nav 3.1</a></li>
+                <li><a href="#">Nav 3.2</a></li>
+                <li><a href="#">Nav 3.3</a></li>
+                <li class="dropdown">
+                    <a href="#">Nav 3.4</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Nav 3.4.1</a></li>
+                        <li><a href="#">Nav 3.4.2</a></li>
+                        <li><a href="#">Nav 3.4.3</a></li>
+                        <li><a href="#">Nav 3.4.4</a></li>
+                        <li><a href="#">Nav 3.4.5</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nav 3.5</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Nav 4</a></li>
+        <li><a href="#">Nav 5</a></li>
+    </ul>
+</nav>
+	</div>
+
+	<!-- jcarousel -->
+  <div class="wrap wrap_jcarousel">
+    <div class="jcarousel">
+        <ul>
+            <li><img src="img/img1.jpg" alt="" /></li>
+            <li><img src="img/img2.jpg" alt="" /></li>
+            <li><img src="img/img3.jpg" alt="" /></li>
+        </ul>
+    </div>
+    <a class="jcarousel-prev" href="#">&#171;</a>
+    <a class="jcarousel-next" href="#">&#187;</a>
+    <p class="jcarousel-pagination"></p>
+  </div>
+
+	<!-- select -->
+	<div class="wrap wrap_select">
+		<select name="country_id" id="country_id" tabindex="1">
+			<option value="">-- Select country --</option>
+			<optgroup label="North America">
+				<option value="1">USA</option>
+				<option value="9">Canada</option>
+			</optgroup>
+			<optgroup label="Europe">
+				<option value="2">France</option>
+				<option value="3">Spain</option>
+				<option value="6">Bulgaria</option>
+				<option value="7" disabled="disabled">Greece</option>
+				<option value="8">Italy</option>
+			</optgroup>
+			<optgroup label="Asia" disabled="disabled">
+				<option value="5">Japan</option>
+				<option value="11">China</option>
+			</optgroup>
+			<option value="4">Brazil</option>
+			<option value="10">South Africa</option>
+		</select>
+	</div>
+
+	<!-- checkbox -->
+	<div class="wrap wrap_checkBox">
+		<div class="checkbox">
+			<form action="#">
+				<div>
+					<label class="chkLabl" for="ch1">label 1</label>
+					<input type="checkbox" class="niceCheck" id="ch1" tabindex="1" />
+				</div>
+				<div>
+					<label class="chkLabl" for="ch2">label 2</label>
+					<input type="checkbox" class="niceCheck" checked="checked" id="ch2" tabindex="2" value="2" />
+				</div>
+				<div>
+					<label class="chkLabl" for="ch3">label 3</label>
+					<input type="checkbox" class="niceCheck" id="ch3" checked="checked" disabled="disabled" />
+				</div>
+			</form>
+		</div>
+		<!-- css checkbox -->
+		<div class="cssCheckbox">
+			<form action="#">
+				<div>
+					<input class="cssBoxInput" type="checkbox" id="css-check1" />
+					<label class="cssBoxLabel" for="css-check1">Чекбокс 1:</label>
+				</div>
+				<div>
+					<input class="cssBoxInput" type="checkbox" id="css-check2" />
+					<label class="cssBoxLabel" for="css-check2">Чекбокс 2:</label>
+				</div>
+				<div>
+					<input class="cssBoxInput" type="checkbox" id="css-check3" />
+					<label class="cssBoxLabel" for="css-check3">Чекбокс 3:</label>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

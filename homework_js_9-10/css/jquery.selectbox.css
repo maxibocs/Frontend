@@ -55,7 +55,7 @@
 	border: solid 1px #515151;
 }
 .sbOptions{
-	background-color: #3F51B5;
+	background-color: #220984;
 	border: solid 1px #515151;
 	list-style: none;
 	left: -1px;
@@ -66,6 +66,12 @@
 	width: 200px;
 	z-index: 1;
 	overflow-y: auto;
+}
+.sbOptions:hover{
+	background-color: #3F51B5;
+	-webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
 }
 .sbOptions li{
 	padding: 0 7px;

@@ -12,6 +12,15 @@ body {
   -moz-box-shadow: 0 0 2px #999;
   box-shadow: 0 0 2px #999;
 }
+.wrap:hover{
+  border: 10px solid #3F51B5;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  transition: 2s;
+}
 
 /*----dropdown menu jQuery----*/
 .wrap_jQmenu {
@@ -33,7 +42,7 @@ nav ul li {
     position: relative;
 }
 nav li ul {
-    background-color: #3F51B5;
+    background-color: #220984;
     position: absolute;
     left: 0;
     top: 40px;

@@ -3,10 +3,18 @@
 $(document).ready(function() {
     $( '.dropdown' ).hover(
         function(){
-            $(this).children('.sub-menu').slideDown(200);
+            $(this).children('.sub-menu').slideDown(200, function () {
+        $(this).animate({
+          backgroundColor: '#3F51B5'
+        }, 500);
+      });
         },
         function(){
-            $(this).children('.sub-menu').slideUp(200);
+            $(this).children('.sub-menu').slideUp(200, function () {
+        $(this).animate({
+          backgroundColor: '#220984'
+        }, 500);
+      });
         }
     );
 });

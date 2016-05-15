@@ -13,13 +13,15 @@ function pow(base, exponent) {
 }
 
 
-while( !isNumeric(base) && !isNumeric(exponent) ){
+while( !isNumeric(base) || !isNumeric(exponent) ){
 
   var base = prompt('Укажите число!', '');
   var exponent = prompt('Укажите степень числа!', '');
 }
 
-if(exponent < 0) {
+var rounding = Math.floor(exponent);
+
+if(exponent < 0 || exponent > rounding) {
 	alert('Степень ' + exponent +
         ' не поддерживается, введите целую степень, большую 0');
 } else {

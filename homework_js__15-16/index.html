@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bing</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="js/tmpl.js"></script>
+    <script src="js/script.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <form action="#" id="sb_form">
+      <a href="http://bing.com" class="logo"></a>
+      <div class="b_searchboxForm" role="search">
+          <input class="b_searchbox" id="sb_form_q" name="q" title="Введите слово для поиска" type="search" maxlength="1000">
+          <input type="submit" class="b_searchboxSubmit" id="sb_form_go" title="Поиск" tabindex="0" name="go" value="">
+      </div>
+  </form>
+  <nav class="b_scopebar" aria-label="navigation" role="navigation">
+    <ul>
+      <li class="b_active">
+        <a href="#">Поиск</a>
+      </li>
+      <li>
+        <a href="#">Изображения</a>
+      </li>
+      <li>
+        <a href="#">Видео</a>
+      </li>
+      <li>
+        <a href="#">Новости</a>
+      </li>
+      <li>
+        <a href="#">Просмотр</a>
+      </li>
+    </ul>
+  </nav>
+  <script type="text/html" class="block-content">
+    <div id="b_content">
+      <div id="b_tween">
+        <span class="sb_count">РЕЗУЛЬТАТЫ:
+          <%= totalEstimatedMatches %>
+        </span>
+      </div>
+      <ul id="b_results">
+        <% for (var i = 0; i < value.length; i++) { %>
+        <li class="b_algo">
+          <div class="b_title">
+            <h4>
+              <a href="<%= value[i].url %>" >
+                <%= value[i].name %>
+              </a>
+            </h4>
+            <div class="b_caption">
+              <div class="b_attribution">
+                <cite>
+                  <%= value[i].displayUrl %>
+                </cite>
+              </div>
+              <div class="b_snippet">
+                <p>
+                  <%= value[i].snippet %>
+                </p>
+              </div>
+            </div>
+          <% } %>
+          </ul>
+      </div>
+  </script>
+</body>
+</html>

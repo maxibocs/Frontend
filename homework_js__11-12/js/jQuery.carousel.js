@@ -2,42 +2,47 @@
 
   $.fn.carousel = function (options) {
 
-    var defaults = {
-      slideSpeed: 500,
-      widthElementParam: 100
-    };
-
-    var settings = $.extend(defaults, options);
-
     var leftArrow = $('.carousel_arrow_left');
     var rightArrow = $('.carousel_arrow_right');
-    var elementsList = $('.carousel_list');
-    var carouselCount = $('.carousel_list').find('li').length;
-
-
-    var slide = 0;
-    var widthElement = defaults.widthElementParam;
-    var maxPosition = - ((1 + carouselCount - 4) * widthElement);
-    var minPosition = 0;
-    var maxPositionLeft = - ((carouselCount - 4) * widthElement);
+    var carusel = $(this).parents('.carousel');
 
     rightArrow.on('click', function(){
-      slide -= widthElement * defaults.slideCount;
-      if (slide <= maxPosition) {
-        slide = 0;
-      }
-      elementsList.animate({ left : slide + "px"}, settings.slideSpeed);
+	    rightCarousel(carusel);
+	    return false;
     });
 
     leftArrow.on('click', function(){
-      slide += widthElement * defaults.slideCount;
-      if (slide > minPosition) {
-        slide = maxPositionLeft;
-      }
-      elementsList.animate({ left : slide + "px"}, settings.slideSpeed);
+	    leftCarousel(carusel);
+	    return false;
     });
 
-    return this;
+    function leftCarousel(carusel){
+      var blockWidth = $(carusel).find('.carousel_item').outerWidth();
+      $(carusel).find(".carousel_list .carousel_item").eq(-1).clone().prependTo($(carusel).find(".carousel_list"));
+      $(carusel).find(".carousel_list").css({"left": "-" + blockWidth + "px"});
+      $(carusel).find(".carousel_list .carousel_item").eq(-1).remove();
+      $(carusel).find(".carousel_list").animate({left: "0px"}, 500);
+    }
+
+    function rightCarousel(carusel){
+      var blockWidth = $(carusel).find('.carousel_item').outerWidth();
+      $(carusel).find(".carousel_list").animate({left: "-" + blockWidth + "px"}, 500, function(){
+	    $(carusel).find(".carousel_list .carousel_item").eq(0).clone().appendTo($(carusel).find(".carousel_list"));
+      $(carusel).find(".carousel_list .carousel_item").eq(0).remove();
+      $(carusel).find(".carousel_list").css({"left": "0px"});
+    });
+    }
+
+
+    $(function() {
+    	autoRight('.carousel:first');
+    });
+
+    function autoRight(carusel){
+    	setInterval(function(){
+    			rightCarousel(carusel);
+    	}, 2000);
+    }
 
   };
 

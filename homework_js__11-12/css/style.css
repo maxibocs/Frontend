@@ -24,11 +24,11 @@
 }
 .carousel_item {
   float: left;
-  margin-right: 14px;
+  margin-right: 4px;
   display: block;
 }
 .item_image {
-  max-width: 120px;
+  max-width: 130px;
 }
 .item_text {
   text-align: center;
@@ -54,18 +54,18 @@
 
 @media screen and (max-width: 782px) {
   .carousel_wrapper {
-     max-width: 615px;
+     max-width: 555px;
   }
   .carousel_hider {
-    width: 460px;
+    width: 399px;
   }
 }
 @media screen and (max-width: 632px) {
   .carousel_wrapper {
-     max-width: 455px;
+     max-width: 420px;
   }
   .carousel_hider {
-    width: 300px;
+    width: 265px;
   }
 }
 

@@ -1,10 +1,7 @@
 $(function () {
 
-  $('.carousel_list').carousel({
-    slideSpeed: 500,
-    widthElementParam: 134,
-    slideCount: 1
-  });
+  $('.carousel').carousel();
+
 
   var html = $('.user_profile').html();
   var body = $('body');

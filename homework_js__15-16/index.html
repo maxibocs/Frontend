@@ -22,7 +22,7 @@
   <form action="#" id="sb_form">
       <a href="http://bing.com" class="logo"></a>
       <div class="b_searchboxForm" role="search">
-          <input class="b_searchbox" id="sb_form_q" name="q" title="Введите слово для поиска" type="search" maxlength="1000">
+          <input class="b_searchbox" id="sb_form_q" name="q" title="Введите слово для поиска" text="" type="search" maxlength="1000">
           <input type="submit" class="b_searchboxSubmit" id="sb_form_go" title="Поиск" tabindex="0" name="go" value="">
       </div>
   </form>
@@ -76,6 +76,45 @@
           <% } %>
           </ul>
       </div>
+  </script>
+  <script type="text/html" class="block-content2">
+    <div id="b_content">
+      <ol id="b_results" role="main" aria-label="Search Results">
+        <li class="b_no" data-bm="4">
+          <h1 class="not_found">Результаты не найдены:
+            <strong class="serch_val"><% var search = $('.b_searchbox').val(); %> <%= search %></strong>.
+          </h1>
+          <h4 class="name_advice">Советы по поиску:</h4>
+          <ul>
+            <li class="item_advice">
+              <span>Проверьте правильность написания слов.</span>
+            </li>
+            <li class="item_advice">
+              <span>Попробуйте перефразировать ключевые слова или использовать синонимы.</span>
+            </li>
+            <li class="item_advice">
+              <span>Попробуйте использовать более общие ключевые слова.</span>
+            </li>
+            <li class="item_advice">
+              <span>Максимально сократите запрос.</span>
+            </li>
+          </ul>
+          <h4 class="useful_resources">Другие полезные ресурсы:</h4>
+          <ul>
+            <li class="item_resource">
+              <span>Дополнительные советы по поиску см. на веб-сайте
+                <a href="http://go.microsoft.com/fwlink/?LinkID=617297">Справка по поиску в Интернете</a>.
+              </span>
+            </li>
+            <li class="item_resource">
+              <span>Если не удалось найти веб-страницу, которая точно существует,
+                <a href="/docs/submit.aspx?FORM=SURE">отправьте нам ее адрес</a>.
+              </span>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
   </script>
 </body>
 </html>

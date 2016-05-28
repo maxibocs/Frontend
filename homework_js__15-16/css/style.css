@@ -29,7 +29,8 @@
   margin-top: 2px;
   z-index: 101;
   border: 1px solid #ccc;
-  font: 18px/normal 'Segoe UI',Arial,Helvetica,Sans-Serif;
+  color: #000;
+  font: 19px/normal 'Segoe UI',Arial,Helvetica,Sans-Serif;
 }
 .b_searchboxForm:hover {
   border: 1px solid #999;
@@ -142,4 +143,27 @@ cite {
     word-wrap: break-word;
     color: #006d21;
     font-weight: bold;
+}
+
+
+/*--------------------------------------------*/
+.b_no{
+  padding: 30px 20px;
+}
+.not_found{
+  color: #666;
+  font: 18px/1.2em 'Segoe UI',Arial,Helvetica,Sans-Serif;
+}
+.serch_val{
+  color: #333;
+}
+.name_advice,.useful_resources{
+  margin-top: 0;
+  font: 13px/normal Arial,Helvetica,Sans-Serif;
+  font-weight: 700;
+}
+.item_advice,.item_resource{
+  margin-top: 0;
+  padding-bottom: 10px;
+  font: 13px/normal Arial,Helvetica,Sans-Serif;
 }

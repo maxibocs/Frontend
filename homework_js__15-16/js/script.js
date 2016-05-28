@@ -11,6 +11,7 @@
     });
 
 
+
     Worker.prototype = new Human();
     Student.prototype = new Human();
 
@@ -19,10 +20,10 @@
     var newWorker1 = new Worker();
     var newStudent1 = new Student();
 
-    console.log('name: ',newStudent1.name);
-    console.log('age: ',newWorker1.age);
     console.log(newWorker);
     console.log(newStudent);
+    console.log('age: ',newWorker1.age);
+    console.log('name: ',newStudent1.name);
   });
 
   function request(search) {
@@ -46,15 +47,20 @@
     })
     .done(function(data) {
       searchData = data.webPages;
+      if (searchData !== undefined){
+
       html = $('.block-content').html();
       content = tmpl(html, searchData);
 
       $('#b_content').remove();
       $('body').append(content);
-    })
-    .fail(function() {
-      alert("Errors, try again!");
-    });
+    } else {
+      html = $('.block-content2').html();
+
+      $('#b_content').remove();
+      $('body').append(tmpl(html));
+    }
+  });
   }
 
   function Human () {
@@ -68,13 +74,13 @@
     this.workingPlace = 'Microsoft';
     this.salary = '2000$';
     this.toWork = function () {
-      console.log('Go work!');
+      console.log(' work!');
     };
   }
   function Student () {
-    this.studyPlace = 'Harvard University';
-    this.scholarship = '300$';
+    this.studyPlace = 'KNU';
+    this.scholarship = '100$';
     this.toWatch = function () {
-      console.log('Watch TV shows');
+      console.log('Let`s watch!');
     };
   }

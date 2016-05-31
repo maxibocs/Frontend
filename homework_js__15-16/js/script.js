@@ -7,23 +7,13 @@
     $('.b_searchboxSubmit').click( function (e) {
       e.preventDefault();
       var serchVal = $('.b_searchbox').val();
+      if (serchVal == 0) {
+        $('#b_content').remove();
+        return;
+    }
       request(serchVal);
+
     });
-
-
-
-    Worker.prototype = new Human();
-    Student.prototype = new Human();
-
-    var newWorker = new Worker();
-    var newStudent = new Student();
-    var newWorker1 = new Worker();
-    var newStudent1 = new Student();
-
-    console.log(newWorker);
-    console.log(newStudent);
-    console.log('age: ',newWorker1.age);
-    console.log('name: ',newStudent1.name);
   });
 
   function request(search) {
@@ -63,6 +53,11 @@
   });
   }
 
+  function Worker(){
+      this.workingPlace ="";
+      this.salary = 0;
+    }
+
   function Human () {
     this.name = 'Jack';
     this.age = '20';
@@ -70,17 +65,37 @@
     this.growth = '178cm';
     this.weight = '78kg';
   }
-  function Worker () {
-    this.workingPlace = 'Microsoft';
-    this.salary = '2000$';
-    this.toWork = function () {
-      console.log(' work!');
-    };
-  }
+  Worker.prototype = new Human();
+
+  Worker.prototype.works = function(workingPlace, salary){
+    this.workingPlace = workingPlace;
+    this.salary = salary;
+  };
+
+  var worker1 = new Worker();
+  var worker2 = new Worker();
+
+   worker1.works('Microsoft', '3000$');
+   worker2.works("Google", '2000$');
+
+   console.log(worker1, worker2);
+
   function Student () {
-    this.studyPlace = 'KNU';
-    this.scholarship = '100$';
-    this.toWatch = function () {
-      console.log('Let`s watch!');
-    };
+    this.studyPlace = "";
+    this.scholarship = 0;
   }
+
+  Student.prototype = new Human();
+
+  Student.prototype.watchTVshows = function(studyPlace, scholarship){
+    this.studyPlace = studyPlace;
+    this.scholarship = scholarship;
+  };
+
+  var student1 = new Student();
+  var student2 = new Student();
+
+  student1.watchTVshows("Harvard", '200$');
+  student2.watchTVshows("Cambridge", '150$');
+
+  console.log(student1, student2);

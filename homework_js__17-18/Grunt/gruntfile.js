@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/src/*.js'],
-        dest: 'js/script.main.js'
+        src: ['src/js/*.js'],
+        dest: 'build/js/script.main.js'
       }
     },
     uglify: {
@@ -15,14 +15,14 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/script.main.js'],
-         dest: 'js/script.min.js'
+        src: ['build/js/script.main.js'],
+         dest: 'build/js/script.min.js'
       }
     },
     cssmin: {
     target: {
       files: {
-        'css/style.min.css': ['css/src/*.css']
+        'build/css/style.min.css': ['src/css/*.css']
       }
     }
   },
@@ -30,9 +30,9 @@ module.exports = function(grunt) {
         dynamic: {
           files: [{
             expand: true,
-            cwd: 'img/src',
+            cwd: 'src/img/',
             src: ['**/*.{png,jpg,gif}'],
-            dest: 'img/'
+            dest: 'build/img/'
           }]
         }
     },

@@ -19,13 +19,13 @@
     });
 
     function leftCarousel(carusel){
-      var block_width = $(carusel).find('.carousel_item').outerWidth();
-      $(carusel).find(".carousel_list .carousel_item").eq(-1).clone().prependTo($(carusel).find(".carousel_list"));
-      $(carusel).find(".carousel_list").css({"left": "-" + block_width + "px"});
-      $(carusel).find(".carousel_list .carousel_item").eq(-1).remove();
-      $(carusel).find(".carousel_list").animate({left: "0px"}, 500);
-
-    }
+        var block_width = $(carusel).find('.carousel_item').outerWidth();
+        $(carusel).find(".carousel_list").animate({left: block_width + "px"}, 500, function(){
+        $(carusel).find(".carousel_list .carousel_item").eq(-1).clone().prependTo($(carusel).find(".carousel_list"));
+        $(carusel).find(".carousel_list .carousel_item").eq(-1).remove();
+        $(carusel).find(".carousel_list").css({"left": "0px"});
+      });
+      }
     function rightCarousel(carusel){
       var block_width = $(carusel).find('.carousel_item').outerWidth();
       $(carusel).find(".carousel_list").animate({left: "-" + block_width + "px"}, 500, function(){

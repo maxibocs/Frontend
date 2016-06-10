@@ -8,7 +8,7 @@ var browserSync = require('browser-sync');
 
 gulp.task('js:build', function () {
   'use strict';
-  gulp.src(['js/jQuery.carousel.js', 'js/script.js'])
+  gulp.src(['src/js/jQuery.carousel.js', 'src/js/script.js'])
     .pipe(concat('script.main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('build/js/'));
@@ -16,7 +16,7 @@ gulp.task('js:build', function () {
 
 gulp.task('css:build', function () {
   'use strict';
-  return gulp.src(['css/reset.css', 'css/style.css', 'css/styleMQ.css'])
+  return gulp.src(['src/css/reset.css', 'src/css/style.css', 'src/css/styleMQ.css'])
     .pipe(concat('style.main.css'))
     .pipe(gulp.dest('build/css/'))
     .pipe(rename({ suffix: '.min'}))
@@ -29,7 +29,7 @@ gulp.task('css:build', function () {
 
 gulp.task('image:build', function () {
   'use strict';
-  return gulp.src('img/*')
+  return gulp.src('src/img/*')
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'));
 });
@@ -47,11 +47,11 @@ gulp.task('build', ['js:build', 'css:build', 'image:build']);
 
 gulp.task('watch', ['browserSync'], function() {
   'use strict';
-  gulp.watch('js/**/*.js', ['js:build']);
+  gulp.watch('src/js/**/*.js', ['js:build']);
 
-  gulp.watch('css/**/*.css', ['css:build']);
+  gulp.watch('src/css/**/*.css', ['css:build']);
 
-  gulp.watch('img/**/*.*', ['image:build']);
+  gulp.watch('src/img/**/*.*', ['image:build']);
 });
 
 gulp.task('default', ['build', 'watch']);

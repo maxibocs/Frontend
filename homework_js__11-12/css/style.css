@@ -1,72 +1,48 @@
 /*----- Carousel -----*/
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  clear: both;
-  display: table;
-}
 
-.carousel_wrapper {
-  margin: 0 auto;
-  max-width: 678px;
-}
 .carousel {
-  margin: 20px 0;
-}
-.carousel_hider {
-  float: left;
-  overflow: hidden;
-  width: 522px;
+	width: 600px;
+	margin: 20px auto;
+	padding: 0 30px;
+	position: relative;
 }
 .carousel_list {
-  position: relative;
-  width: 10000px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+  overflow: hidden;
+}
+.carousel_hider {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 10000px;
 }
 .carousel_item {
-  float: left;
-  margin-right: 4px;
-  display: block;
+	padding: 10px;
+	float: left;
 }
 .item_image {
   max-width: 130px;
 }
-.item_text {
+.item_text{
   text-align: center;
 }
 .carousel_arrow {
-  float: left;
-  display: block;
-  padding: 5px;
-  margin-top: 28px;
-  border: 1px solid #808080;
-  background-color: #D0D0D0;
-}
-.carousel_arrow:hover {
-  cursor: pointer;
-  background-color: #DAECEF;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
 }
 .carousel_arrow_left {
-  margin-right: 20px;
+	left: 0;
+	background: url(../img/left-arrow.png) 11px 40% no-repeat;
 }
 .carousel_arrow_right {
-  margin-left: 20px;
-}
-
-@media screen and (max-width: 782px) {
-  .carousel_wrapper {
-     max-width: 555px;
-  }
-  .carousel_hider {
-    width: 399px;
-  }
-}
-@media screen and (max-width: 632px) {
-  .carousel_wrapper {
-     max-width: 420px;
-  }
-  .carousel_hider {
-    width: 265px;
-  }
+	right: 0;
+	background: url(../img/right-arrow.png) 11px 40% no-repeat;
 }
 
 /*----- UserProfile -----*/
@@ -76,7 +52,7 @@ body {
 }
 .profile_wrapper {
   width: 510px;
-  max-width: 95%;
+  max-width: 510px;
   margin: 5px auto 45px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 13px -1px #6E6767;

@@ -36,13 +36,25 @@ module.exports = function(grunt) {
           }]
         }
     },
+	htmlmin: {               
+    dist: {                                   
+      options: {                                 
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      files: {                                   
+        'build/index.html': 'src/index.html'
+      }
+	}
+    },
 });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-  grunt.registerTask('default', ['concat' ,'uglify','cssmin','imagemin']);
+  grunt.registerTask('default', ['concat' ,'uglify','cssmin','imagemin','htmlmin']);
 
 };

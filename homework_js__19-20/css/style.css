@@ -1,0 +1,857 @@
+/* line 1, scss/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, scss/base/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, scss/base/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, scss/base/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, scss/base/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, scss/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, scss/base/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'ubuntumedium';
+  src: url("../fonts/ubuntu-m-webfont.eot");
+  src: url("../fonts/ubuntu-m-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-m-webfont.woff2") format("woff2"), url("../fonts/ubuntu-m-webfont.woff") format("woff"), url("../fonts/ubuntu-m-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntu_condensedregular';
+  src: url("../fonts/ubuntu-c-webfont.eot");
+  src: url("../fonts/ubuntu-c-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-c-webfont.woff2") format("woff2"), url("../fonts/ubuntu-c-webfont.woff") format("woff"), url("../fonts/ubuntu-c-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../fonts/ubuntu-l-webfont.eot");
+  src: url("../fonts/ubuntu-l-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-l-webfont.woff2") format("woff2"), url("../fonts/ubuntu-l-webfont.woff") format("woff"), url("../fonts/ubuntu-l-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 1, scss/base/_base.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 6, scss/base/_base.scss */
+body {
+  background-color: #fff;
+}
+
+/* line 9, scss/base/_base.scss */
+.wrapper {
+  margin: 0 auto;
+  max-width: 1160px;
+  width: 1160px;
+}
+
+/*--- clearfix ---*/
+/* line 15, scss/base/_base.scss */
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* line 1, scss/modules/_logo.scss */
+.logo {
+  float: left;
+  margin-top: 30px;
+}
+/* line 4, scss/modules/_logo.scss */
+.logo .logo__link {
+  float: left;
+}
+/* line 7, scss/modules/_logo.scss */
+.logo .logo__text {
+  float: left;
+}
+/* line 9, scss/modules/_logo.scss */
+.logo .logo__text h1 {
+  color: #434343;
+  font-size: 30px;
+  line-height: 20px;
+  font-family: ubuntumedium, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 15, scss/modules/_logo.scss */
+.logo .logo__text p {
+  padding-left: 2px;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: ubuntulight, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 4.5px;
+}
+
+/* line 1, scss/modules/_socials.scss */
+.socials {
+  float: right;
+  margin-top: 40px;
+}
+/* line 4, scss/modules/_socials.scss */
+.socials a {
+  float: left;
+  margin-right: 20px;
+  width: 17px;
+  height: 16px;
+  display: block;
+  background-image: url(../img/socials.png);
+  transition: 0.1s ease-in-out;
+}
+/* line 12, scss/modules/_socials.scss */
+.socials a:hover {
+  transition: 0.1s ease-in-out;
+}
+/* line 16, scss/modules/_socials.scss */
+.socials a:last-child {
+  margin-right: 0;
+}
+/* line 19, scss/modules/_socials.scss */
+.socials .socials__facebook {
+  width: 10px;
+  background-position: 0 0;
+}
+/* line 23, scss/modules/_socials.scss */
+.socials .socials__facebook:hover {
+  background-position: 0 16px;
+  transition: 0.1s ease-in-out;
+}
+/* line 27, scss/modules/_socials.scss */
+.socials .socials__twitter {
+  width: 16px;
+  background-position: -10px 0;
+}
+/* line 31, scss/modules/_socials.scss */
+.socials .socials__twitter:hover {
+  background-position: -10px 16px;
+}
+/* line 34, scss/modules/_socials.scss */
+.socials .socials__rss {
+  background-position: -26px -1px;
+}
+/* line 37, scss/modules/_socials.scss */
+.socials .socials__rss:hover {
+  background-position: -26px 15px;
+}
+/* line 40, scss/modules/_socials.scss */
+.socials .socials__linkidn {
+  background-position: -44px 0;
+}
+/* line 43, scss/modules/_socials.scss */
+.socials .socials__linkidn:hover {
+  background-position: -44px 16px;
+}
+/* line 46, scss/modules/_socials.scss */
+.socials .socials__skype {
+  background-position: -60px 0;
+}
+/* line 49, scss/modules/_socials.scss */
+.socials .socials__skype:hover {
+  background-position: -60px 16px;
+}
+
+/* line 1, scss/modules/_navigation.scss */
+nav {
+  margin-top: 30px;
+  background: #2a2d32;
+}
+
+/* line 5, scss/modules/_navigation.scss */
+.nav-page {
+  float: left;
+  font-size: 0;
+}
+/* line 8, scss/modules/_navigation.scss */
+.nav-page__item {
+  display: inline-block;
+}
+/* line 11, scss/modules/_navigation.scss */
+.nav-page__link {
+  display: block;
+  padding: 20px 40px;
+  border-right: 1px solid #181a1d;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: ubuntu_condensedregular, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 21, scss/modules/_navigation.scss */
+.nav-page__link:hover {
+  color: #f4b60d;
+}
+/* line 24, scss/modules/_navigation.scss */
+.nav-page__link_active {
+  background: #248cec;
+}
+
+/* line 29, scss/modules/_navigation.scss */
+.search {
+  float: right;
+}
+/* line 31, scss/modules/_navigation.scss */
+.search__text {
+  margin-top: 9px;
+  margin-right: -5px;
+  padding: 12px 35px 12px 15px;
+  border: 1px solid #181a1d;
+  outline: 0;
+  background: #35383c;
+  color: #fff;
+}
+/* line 40, scss/modules/_navigation.scss */
+.search__btn {
+  position: relative;
+  top: 5px;
+  left: -30px;
+  border: none;
+  background: url(../img/search__btn.png) no-repeat;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 1, scss/modules/_slider.scss */
+.wrap {
+  max-width: 1160px;
+  position: relative;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+}
+
+/*-----jCarousel-----*/
+/* line 9, scss/modules/_slider.scss */
+.wrap_jcarousel {
+  margin: 40px auto 65px;
+}
+
+/* line 12, scss/modules/_slider.scss */
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 16, scss/modules/_slider.scss */
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, scss/modules/_slider.scss */
+.jcarousel li {
+  float: left;
+}
+
+/* line 26, scss/modules/_slider.scss */
+.jcarousel img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 31, scss/modules/_slider.scss */
+.jcarousel-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin: 0;
+  margin-left: -22px;
+}
+
+/* line 38, scss/modules/_slider.scss */
+.jcarousel-pagination a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  height: 15px;
+  width: 15px;
+  line-height: 10px;
+  background: #fff;
+  color: #4E443C;
+  text-indent: -9999px;
+  margin-right: 15px;
+  -webkit-box-shadow: 0 0 2px #4E443C;
+  -moz-box-shadow: 0 0 2px #4E443C;
+  box-shadow: 0 0 2px #4E443C;
+}
+
+/* line 53, scss/modules/_slider.scss */
+.jcarousel-pagination a.active {
+  background: #001d1d;
+  color: #fff;
+  opacity: 1;
+  vertical-align: bottom;
+  border: 3px solid #fff;
+  -webkit-box-shadow: 0 0 2px #F0EFE7;
+  -moz-box-shadow: 0 0 2px #F0EFE7;
+  box-shadow: 0 0 2px #F0EFE7;
+}
+
+/* line 63, scss/modules/_slider.scss */
+.slide-text {
+  position: absolute;
+  float: left;
+  margin-top: -230px;
+  margin-left: 30px;
+  padding: 23px;
+  background: url(../img/slider-text.png) no-repeat;
+  color: #fff;
+  font-size: 54px;
+  line-height: 52px;
+  text-transform: uppercase;
+  font-family: ubuntumedium, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 75, scss/modules/_slider.scss */
+.slide-text p:first-child {
+  color: #f4b60d;
+}
+
+/* line 1, scss/modules/_blocks.scss */
+.blocks {
+  margin-bottom: 80px;
+}
+/* line 3, scss/modules/_blocks.scss */
+.blocks__item {
+  float: left;
+  max-width: 33.33%;
+  width: 100%;
+}
+/* line 8, scss/modules/_blocks.scss */
+.blocks__count {
+  float: left;
+  margin: -5px 30px 80px 0;
+  color: rgba(42, 43, 46, 0.1);
+  font-size: 90px;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 16, scss/modules/_blocks.scss */
+.blocks__sign_pb {
+  padding-bottom: 6px;
+}
+/* line 20, scss/modules/_blocks.scss */
+.blocks__header {
+  margin-top: 15px;
+  color: #2a2b2e;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 27, scss/modules/_blocks.scss */
+.blocks__article {
+  margin-top: 20px;
+  color: #8a8a8a;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 34, scss/modules/_blocks.scss */
+.blocks__post-link {
+  display: block;
+  margin-top: 20px;
+  margin-left: 133px;
+  width: 88px;
+  height: 10px;
+  color: #2a2b2e;
+  font-size: 13px;
+  text-decoration: none;
+  background: url(../img/arrow.png) 74px -9px no-repeat;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 45, scss/modules/_blocks.scss */
+.blocks__post-link:hover {
+  color: #248cec;
+  background: url(../img/arrow.png) 74px 2px no-repeat;
+}
+
+/* line 1, scss/modules/_services.scss */
+.services {
+  background: #2a2d32;
+}
+/* line 3, scss/modules/_services.scss */
+.services__wrapp {
+  padding-bottom: 50px;
+}
+/* line 6, scss/modules/_services.scss */
+.services__head {
+  padding: 45px 0 55px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 20px;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 13, scss/modules/_services.scss */
+.services__block {
+  float: left;
+  max-width: 260px;
+  width: 100%;
+  margin-right: 40px;
+}
+/* line 18, scss/modules/_services.scss */
+.services__block:last-child {
+  margin-right: 0;
+}
+/* line 21, scss/modules/_services.scss */
+.services__block:hover {
+  cursor: pointer;
+}
+/* line 24, scss/modules/_services.scss */
+.services__block:hover .services__image-h {
+  opacity: 1;
+}
+/* line 27, scss/modules/_services.scss */
+.services__block:hover .services__pic-caption {
+  color: #f4b60d;
+}
+/* line 31, scss/modules/_services.scss */
+.services__pic {
+  position: relative;
+}
+/* line 36, scss/modules/_services.scss */
+.services__image-h {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+/* line 42, scss/modules/_services.scss */
+.services__pic-caption {
+  display: block;
+  margin-top: 35px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 1, scss/modules/_content-box.scss */
+.content-box {
+  background: #f7f7f7;
+}
+/* line 3, scss/modules/_content-box.scss */
+.content-box__news {
+  padding-bottom: 80px;
+}
+/* line 7, scss/modules/_content-box.scss */
+.content-box__news1 {
+  margin-bottom: 30px;
+}
+/* line 10, scss/modules/_content-box.scss */
+.content-box__head {
+  margin-bottom: 50px;
+  color: #2a2d32;
+  font-size: 24px;
+  line-height: 20px;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 17, scss/modules/_content-box.scss */
+.content-box__img {
+  float: left;
+  position: relative;
+}
+/* line 20, scss/modules/_content-box.scss */
+.content-box__img p {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: #248cec;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 33, scss/modules/_content-box.scss */
+.content-box__img p:last-child {
+  top: 50px;
+  color: #2a2b2e;
+  background: #f4b60d;
+  padding: 10px;
+}
+/* line 40, scss/modules/_content-box.scss */
+.content-box__article {
+  float: left;
+  max-width: 375px;
+  margin-left: 35px;
+}
+/* line 45, scss/modules/_content-box.scss */
+.content-box__banners, .content-box__news {
+  float: left;
+  width: 50%;
+  padding-top: 60px;
+}
+
+/* line 52, scss/modules/_content-box.scss */
+.article__head {
+  margin-bottom: 12px;
+}
+/* line 55, scss/modules/_content-box.scss */
+.article__head a {
+  color: #2a2d32;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 61, scss/modules/_content-box.scss */
+.article__head a:hover {
+  color: #248cec;
+}
+/* line 65, scss/modules/_content-box.scss */
+.article p {
+  color: #8a8a8a;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 70, scss/modules/_content-box.scss */
+.article p span {
+  color: #248cec;
+}
+/* line 74, scss/modules/_content-box.scss */
+.article__comments {
+  margin-bottom: 25px;
+}
+
+/*ACCORDION*/
+/* line 80, scss/modules/_content-box.scss */
+.accordion {
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 82, scss/modules/_content-box.scss */
+.accordion * {
+  box-sizing: border-box;
+}
+
+/* line 86, scss/modules/_content-box.scss */
+.heading-primary {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+/* line 91, scss/modules/_content-box.scss */
+.accordion dd,
+.accordion__panel {
+  background-color: #f7f7f7;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 97, scss/modules/_content-box.scss */
+.accordion p {
+  padding: 2.5em;
+  color: #8a8a8a;
+  font-size: 13px;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* line 103, scss/modules/_content-box.scss */
+.accordion {
+  position: relative;
+  background-color: #eee;
+}
+
+/* line 107, scss/modules/_content-box.scss */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 111, scss/modules/_content-box.scss */
+.accordionTitle,
+.accordion__Heading {
+  background-image: url("../img/accordion__closed.jpg");
+  padding: 13px;
+  margin-bottom: 1px;
+  display: block;
+  color: #2a2d32;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out;
+}
+/* line 121, scss/modules/_content-box.scss */
+.accordionTitle:before,
+.accordion__Heading:before {
+  content: "+";
+  margin-right: 30px;
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  transition: transform 0.3s ease-in-out;
+}
+/* line 129, scss/modules/_content-box.scss */
+.accordionTitle:hover,
+.accordion__Heading:hover {
+  background-image: url("../img/accordion__open.jpg");
+  color: #fff;
+}
+
+/* line 134, scss/modules/_content-box.scss */
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+  background-image: url("../img/accordion__open.jpg");
+  color: #fff;
+}
+/* line 138, scss/modules/_content-box.scss */
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+  transform: rotate(-225deg);
+}
+
+/* line 142, scss/modules/_content-box.scss */
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  transition: max-height 1s;
+}
+@media screen and (min-width: 48em) {
+  /* line 142, scss/modules/_content-box.scss */
+  .accordionItem {
+    max-height: 15em;
+    transition: max-height 0.5s;
+  }
+}
+
+/* line 152, scss/modules/_content-box.scss */
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+
+/* line 155, scss/modules/_content-box.scss */
+.no-js .accordionItem.is-collapsed {
+  max-height: 400px;
+}
+
+/* line 158, scss/modules/_content-box.scss */
+.animateIn {
+  animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+
+/* line 161, scss/modules/_content-box.scss */
+.animateOut {
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+  }
+}
+/* line 1, scss/modules/_brands.scss */
+.brands {
+  padding: 70px 0 80px;
+}
+/* line 3, scss/modules/_brands.scss */
+.brands__list {
+  font-size: 0;
+}
+/* line 6, scss/modules/_brands.scss */
+.brands__item {
+  display: inline-block;
+  padding-right: 50px;
+}
+/* line 9, scss/modules/_brands.scss */
+.brands__item:last-child {
+  padding-right: 0;
+}
+/* line 13, scss/modules/_brands.scss */
+.brands__link {
+  display: block;
+  width: 150px;
+  height: 61px;
+  background: url("../img/brands.png") no-repeat;
+}
+/* line 18, scss/modules/_brands.scss */
+.brands__link_1 {
+  background-position: 0 0;
+}
+/* line 20, scss/modules/_brands.scss */
+.brands__link_1:hover {
+  background-position: 0 -61px;
+}
+/* line 24, scss/modules/_brands.scss */
+.brands__link_2 {
+  background-position: -150px 0;
+}
+/* line 26, scss/modules/_brands.scss */
+.brands__link_2:hover {
+  background-position: -150px -61px;
+}
+/* line 30, scss/modules/_brands.scss */
+.brands__link_3 {
+  background-position: -302px 0;
+}
+/* line 32, scss/modules/_brands.scss */
+.brands__link_3:hover {
+  background-position: -302px -61px;
+}
+/* line 36, scss/modules/_brands.scss */
+.brands__link_4 {
+  background-position: -455px 0;
+}
+/* line 38, scss/modules/_brands.scss */
+.brands__link_4:hover {
+  background-position: -455px -61px;
+}
+/* line 42, scss/modules/_brands.scss */
+.brands__link_5 {
+  background-position: -602px 0;
+}
+/* line 44, scss/modules/_brands.scss */
+.brands__link_5:hover {
+  background-position: -602px -61px;
+}
+/* line 48, scss/modules/_brands.scss */
+.brands__link_6 {
+  background-position: -752px 0;
+}
+/* line 50, scss/modules/_brands.scss */
+.brands__link_6:hover {
+  background-position: -752px -61px;
+}
+
+/* line 1, scss/layout/_footer.scss */
+.foot {
+  background-color: #2a2d32;
+}
+/* line 3, scss/layout/_footer.scss */
+.foot__links-wrapp {
+  padding-bottom: 80px;
+}
+/* line 6, scss/layout/_footer.scss */
+.foot__line {
+  background-color: #35383c;
+}
+/* line 10, scss/layout/_footer.scss */
+.foot__line-wrapp p {
+  position: relative;
+  float: left;
+  margin: 20px 30px 20px 0;
+  padding-left: 20px;
+  color: #6e6f72;
+  font-size: 13px;
+  line-height: 36px;
+  text-decoration: none;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 21, scss/layout/_footer.scss */
+.foot__line-wrapp p:last-child {
+  float: right;
+  margin-right: 0;
+  padding-left: 0;
+}
+/* line 26, scss/layout/_footer.scss */
+.foot__line-wrapp img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+/* line 34, scss/layout/_footer.scss */
+.site-map div {
+  float: left;
+  margin-right: 5%;
+  max-width: 20%;
+  width: 100%;
+}
+/* line 40, scss/layout/_footer.scss */
+.site-map__head {
+  margin: 50px 0 45px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 48, scss/layout/_footer.scss */
+.site-map__link {
+  display: block;
+  border-bottom: 1px solid #393c40;
+  color: #6e6f72;
+  font-size: 13px;
+  line-height: 36px;
+  text-decoration: none;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+}
+/* line 56, scss/layout/_footer.scss */
+.site-map__link:last-child {
+  border: none;
+}
+/* line 59, scss/layout/_footer.scss */
+.site-map__link:hover {
+  color: #248cec;
+}

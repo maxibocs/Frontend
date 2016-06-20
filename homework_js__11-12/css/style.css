@@ -1,35 +1,20 @@
 /*----- Carousel -----*/
 
-.carousel {
-	width: 600px;
+.container {
 	margin: 20px auto;
-	padding: 0 30px;
-	position: relative;
 }
-.carousel_list {
-	position: relative;
+.carousel {
 	margin: 0;
 	padding: 0;
-  overflow: hidden;
+	list-style: none;
 }
-.carousel_hider {
-	position: relative;
-	left: 0;
-	top: 0;
-	width: 10000px;
-}
+
 .carousel_item {
-	padding: 10px;
 	float: left;
-}
-.item_image {
-  max-width: 130px;
-}
-.item_text{
-  text-align: center;
+  padding-left: 5px;
 }
 .carousel_arrow {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 1;
 	height: 100%;
@@ -38,11 +23,11 @@
 }
 .carousel_arrow_left {
 	left: 0;
-	background: url(../img/left-arrow.png) 11px 40% no-repeat;
+	background: url(../img/left-arrow.png) 11px 70px no-repeat;
 }
 .carousel_arrow_right {
 	right: 0;
-	background: url(../img/right-arrow.png) 11px 40% no-repeat;
+	background: url(../img/right-arrow.png) 17px 70px no-repeat;
 }
 
 /*----- UserProfile -----*/

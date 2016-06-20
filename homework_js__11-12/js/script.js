@@ -1,6 +1,11 @@
 $(function () {
 
-  $('.carousel').carousel();
+  $('.container').carousel({
+    btnNext: '.carousel_arrow_right',
+    btnPrev: '.carousel_arrow_left',
+    visible: 4,
+    rotateBy: 1
+  });
 
 
   var html = $('.user_profile').html();

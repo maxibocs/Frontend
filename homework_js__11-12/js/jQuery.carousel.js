@@ -6,7 +6,7 @@
 			speed: 500,
 			btnNext: null,
 			btnPrev: null,
-			auto: null,
+			auto: 5000,
 			backSlide: false
 		};
 

@@ -4,7 +4,8 @@ $(function () {
     btnNext: '.carousel_arrow_right',
     btnPrev: '.carousel_arrow_left',
     visible: 4,
-    rotateBy: 1
+    rotateBy: 1,
+    auto: 4000
   });
 
 

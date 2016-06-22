@@ -5,6 +5,7 @@ $(function () {
     btnPrev: '.carousel_arrow_left',
     visible: 4,
     rotateBy: 1,
+    speed: 500,
     auto: 4000
   });
 

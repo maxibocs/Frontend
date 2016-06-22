@@ -2,8 +2,8 @@
 	$.fn.carousel = function(options) {
 		var settings = {
 			visible: 3,
-			rotateBy: 1,
-			speed: 500,
+			rotateBy: 2,
+			speed: 700,
 			btnNext: null,
 			btnPrev: null,
 			auto: 5000,

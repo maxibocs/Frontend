@@ -84,7 +84,7 @@ table {
 }
 
 /* line 6, scss/base/_base.scss */
-body {
+.wrapping {
   background-color: #fff;
 }
 
@@ -117,14 +117,14 @@ body {
   float: left;
 }
 /* line 9, scss/modules/_logo.scss */
-.logo .logo__text h1 {
+.logo .logo__text .logo__name {
   color: #434343;
   font-size: 30px;
   line-height: 20px;
   font-family: ubuntumedium, "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 15, scss/modules/_logo.scss */
-.logo .logo__text p {
+.logo .logo__text .logo__sometext {
   padding-left: 2px;
   color: #333;
   font-size: 12px;
@@ -139,7 +139,7 @@ body {
   margin-top: 40px;
 }
 /* line 4, scss/modules/_socials.scss */
-.socials a {
+.socials .socials-icon {
   float: left;
   margin-right: 20px;
   width: 17px;
@@ -149,11 +149,11 @@ body {
   transition: 0.1s ease-in-out;
 }
 /* line 12, scss/modules/_socials.scss */
-.socials a:hover {
+.socials .socials-icon:hover {
   transition: 0.1s ease-in-out;
 }
 /* line 16, scss/modules/_socials.scss */
-.socials a:last-child {
+.socials .socials-icon:last-child {
   margin-right: 0;
 }
 /* line 19, scss/modules/_socials.scss */
@@ -201,7 +201,7 @@ body {
 }
 
 /* line 1, scss/modules/_navigation.scss */
-nav {
+.nav {
   margin-top: 30px;
   background: #2a2d32;
 }
@@ -282,7 +282,7 @@ nav {
 }
 
 /* line 16, scss/modules/_slider.scss */
-.jcarousel ul {
+.jcarousel-list {
   width: 20000em;
   position: relative;
   list-style: none;
@@ -291,12 +291,12 @@ nav {
 }
 
 /* line 23, scss/modules/_slider.scss */
-.jcarousel li {
+.jcarousel-item {
   float: left;
 }
 
 /* line 26, scss/modules/_slider.scss */
-.jcarousel img {
+.jcarousel-img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -355,7 +355,7 @@ nav {
   font-family: ubuntumedium, "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 75, scss/modules/_slider.scss */
-.slide-text p:first-child {
+.slide-text .slide-sometext:first-child {
   color: #f4b60d;
 }
 
@@ -504,7 +504,7 @@ nav {
   position: relative;
 }
 /* line 20, scss/modules/_content-box.scss */
-.content-box__img p {
+.content-box__img .news__date {
   position: absolute;
   top: 10px;
   left: -10px;
@@ -518,7 +518,7 @@ nav {
   font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 33, scss/modules/_content-box.scss */
-.content-box__img p:last-child {
+.content-box__img .news__date:last-child {
   top: 50px;
   color: #2a2b2e;
   background: #f4b60d;
@@ -542,7 +542,7 @@ nav {
   margin-bottom: 12px;
 }
 /* line 55, scss/modules/_content-box.scss */
-.article__head a {
+.article__head .article__name {
   color: #2a2d32;
   font-size: 16px;
   line-height: 20px;
@@ -550,18 +550,18 @@ nav {
   font-family: "ubuntumedium", "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 61, scss/modules/_content-box.scss */
-.article__head a:hover {
+.article__head .article__name:hover {
   color: #248cec;
 }
 /* line 65, scss/modules/_content-box.scss */
-.article p {
+.article .article__sometext {
   color: #8a8a8a;
   font-size: 13px;
   line-height: 20px;
   font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 70, scss/modules/_content-box.scss */
-.article p span {
+.article .article__sometext span {
   color: #248cec;
 }
 /* line 74, scss/modules/_content-box.scss */
@@ -587,7 +587,7 @@ nav {
 }
 
 /* line 91, scss/modules/_content-box.scss */
-.accordion dd,
+.accordion-content,
 .accordion__panel {
   background-color: #f7f7f7;
   font-size: 1em;
@@ -595,7 +595,7 @@ nav {
 }
 
 /* line 97, scss/modules/_content-box.scss */
-.accordion p {
+.accordion-text {
   padding: 2.5em;
   color: #8a8a8a;
   font-size: 13px;
@@ -797,7 +797,7 @@ nav {
   background-color: #35383c;
 }
 /* line 10, scss/layout/_footer.scss */
-.foot__line-wrapp p {
+.foot__line-wrapp .foot__info {
   position: relative;
   float: left;
   margin: 20px 30px 20px 0;
@@ -809,20 +809,20 @@ nav {
   font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 }
 /* line 21, scss/layout/_footer.scss */
-.foot__line-wrapp p:last-child {
+.foot__line-wrapp .foot__info:last-child {
   float: right;
   margin-right: 0;
   padding-left: 0;
 }
 /* line 26, scss/layout/_footer.scss */
-.foot__line-wrapp img {
+.foot__line-wrapp .icon__info {
   position: absolute;
   top: 10px;
   left: 0;
 }
 
 /* line 34, scss/layout/_footer.scss */
-.site-map div {
+.site-map .site-map__block {
   float: left;
   margin-right: 5%;
   max-width: 20%;

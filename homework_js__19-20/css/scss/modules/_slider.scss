@@ -13,17 +13,17 @@
     position: relative;
     overflow: hidden;
 }
-.jcarousel ul {
+.jcarousel-list {
     width: 20000em;
     position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.jcarousel li {
+.jcarousel-item {
     float: left;
 }
-.jcarousel img {
+.jcarousel-img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -72,7 +72,7 @@
   line-height: 52px;
   text-transform: uppercase;
   @include font-family(ubuntumedium);
-  p:first-child {
+  .slide-sometext:first-child {
     color: $gold;
   }
 }

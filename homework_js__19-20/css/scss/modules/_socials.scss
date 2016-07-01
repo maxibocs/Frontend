@@ -1,19 +1,19 @@
 .socials {
   float: right;
   margin-top: 40px;
-  a {
+  .socials-icon {
     float: left;
     margin-right: 20px;
     width: 17px;
     height: 16px;
     display: block;
-    background-image: url(../img/socials.png);    
+    background-image: url(../img/socials.png);
     transition: 0.1s ease-in-out;
     &:hover {
     transition: 0.1s ease-in-out;
     }
   }
-  a:last-child {
+  .socials-icon:last-child {
     margin-right: 0;
   }
   .socials__facebook {

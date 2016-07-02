@@ -1,8 +1,9 @@
 .services {
+  min-width: 1160px;
   background: $gray;
-  &__wrapp {    
+  &__wrapp {
     padding-bottom: 50px;
-  } 
+  }
   &__head {
     padding: 45px 0 55px;
     color: $white;

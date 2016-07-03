@@ -1,12 +1,19 @@
 {
   "name": "my-project-name",
-  "version": "0.1.0",
+  "version": "3.8.9",
+  "description": " ",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-htmlmin": "^1.4.0",
-    "grunt-contrib-imagemin": "^1.0.1",
+	"grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1"
-  }
+  },
+   "repository": {
+    "type": " ",
+    "url": " "
+  },
+  "author": "",
+  "license": "ISC"
 }

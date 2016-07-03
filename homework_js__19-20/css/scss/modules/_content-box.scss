@@ -1,8 +1,10 @@
 .content-box {
+  min-width: 1160px;
   background: #f7f7f7;
   &__news {
     @extend .content-box__banners;
     padding-bottom: 80px;
+    margin-left: 10px;
   }
   &__news1 {
     margin-bottom: 30px;
@@ -44,7 +46,7 @@
   }
   &__banners {
     float: left;
-    width: 50%;
+    width: 49.5%;
     padding-top: 60px;
   }
 }

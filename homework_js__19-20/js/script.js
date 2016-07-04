@@ -385,7 +385,7 @@ var dataObj = [
 
 /*1 task*/
 var sortedBySkills;
-sortedBySkills = _.sortBy(_.uniq(_.flatten(_.map(dataObj, 'skills'))));
+sortedBySkills = _.sortBy(_.uniq(_.flatten(_.map(dataObj, 'skills'))), _.toLower);
   console.log('sortedBySkills: ', sortedBySkills);
 /*2 task*/
 var sortByFriendsCount = _.flatMap(_.sortBy(dataObj, 'friends'), 'name');

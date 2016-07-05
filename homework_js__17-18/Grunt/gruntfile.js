@@ -47,6 +47,13 @@ module.exports = function(grunt) {
       }
 	}
     },
+	processhtml: {
+    dist: {
+      files: {
+        'build/index.html': ['src/index.html']
+      }
+    }
+  }
 });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -54,7 +61,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-processhtml');
 
-  grunt.registerTask('default', ['concat' ,'uglify','cssmin','imagemin','htmlmin']);
+  grunt.registerTask('default', ['concat' ,'uglify','cssmin','imagemin','htmlmin','processhtml']);
 
 };

@@ -50,6 +50,36 @@ module.exports = function(grunt) {
         }]
       }
     },
+    watch: {
+      options: {
+        livereload: true
+      },
+      scripts: {
+        files: ['src/js/*.js'],
+        tasks: ['concat', 'uglify'],
+        options: {
+          spawn: false
+        }
+      },
+      scss: {
+        files: ['src/css/scss/*.scss', 'src/css/scss/*/*.scss'],
+        tasks: ['sass'],
+        options: {
+          spawn: false
+        }
+      },
+      css: {
+        files: ['src/css/*.css'],
+        tasks: ['cssmin'],
+        options: {
+          spawn: false
+        }
+      },
+      img: {
+        files: ['src/img/*'],
+        tasks: ['imagemin']
+      }
+    }
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -58,7 +88,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'imagemin','watch']);
 
 };
